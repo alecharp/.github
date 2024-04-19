@@ -1,0 +1,49 @@
+name-template: 'v$RESOLVED_VERSION 🌈'
+tag-template: 'v$NEXT_MINOR_VERSION'
+version-template: $MAJOR.$MINOR.$PATCH
+
+categories:
+  - title: 🚀 New features and improvements
+    labels:
+      - enhancement
+      - feature
+      - rfe
+  - title: 🐛 Bug fixes
+    labels:
+      - bug
+      - fix
+      - bugfix
+  - title: 📝 Documentation updates
+    labels:
+      - documentation
+  - title: 👻 Maintenance
+    labels:
+      - chore
+  - title: 📦 Dependency updates
+    labels:
+      - dependencies
+    collapse-after: 15
+exclude-labels:
+  - reverted
+  - no-changelog
+  - skip-changelog
+  - invalid
+
+change-template: '- $TITLE @AUTHOR (#$NUMBER)'
+template: |
+  $CHANGES
+
+autolabeler:
+  - label: 'documentation'
+    branch:
+      - '/docs{0,1}\/.+/'
+  - label: 'bug'
+    branch:
+      - '/fix\/.+/'
+      - '/bug\/.+/'
+      - '/bugfix\/.+/'
+    title:
+      - '/fix/i'
+  - label: 'enhancement'
+    branch:
+      - '/feature\/.+/'
