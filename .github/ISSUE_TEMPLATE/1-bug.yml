@@ -1,0 +1,33 @@
+name: '🐛 Bug report'
+description: 'Report a bug with the project.'
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this bug report!
+  - type: input
+    attributes:
+      label: Version
+  - type: textarea
+    attributes:
+      label: Observed behavior
+      description: |
+        Explain the behavior you witnessed.
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: |
+        Explain the behavior you were expected to have.
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+      description: |
+        Write bullet-point reproduction steps.
+        Be explicit about everything.
+        A good bug report reduce the investigation and speed up the resolution.
+      placeholder: |
+        1. Step 1: ...
+        2. Step 2: ...
+    validations:
+      required: true

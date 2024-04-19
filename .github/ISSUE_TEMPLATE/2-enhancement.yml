@@ -1,0 +1,16 @@
+name: '✨ New feature'
+description: 'A new feature the project could benefit from.'
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to propose a new feature for this project.
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        Please explain what you would like the project to do more.
+        Be as specific as possible and explain how you would benefit from this new feature, how you would use it.
+    validations:
+      required: true
